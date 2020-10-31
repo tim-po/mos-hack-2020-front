@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import 
+// import TextField from '@material-ui/core/TextField';
+// import Autocomplete from '@material-ui/lab/Autocomplete';
 
 function TitledList(props){
 
@@ -31,6 +32,30 @@ function TitledList(props){
                                 setLocalState({...newLocalState})
                             }} value={localState[key]}
                         />
+                        {/* <Autocomplete
+                            id="combo-box-demo"
+                            options={top3okraski}
+                            getOptionLabel={(option) => option.title}
+                            style={{ width: 300 }}
+                            onClose={event => {
+                                let newLocalState = Object.assign(localState)
+                                newLocalState[key] = event.target.value
+                                console.log(newLocalState)
+                                setLocalState({...newLocalState})
+                            }}
+                            onChange={event => {
+                                let newLocalState = Object.assign(localState)
+                                newLocalState[key] = event.target.value
+                                setLocalState({...newLocalState})
+                            }} 
+                            inputValue={localState[key]}
+                            renderInput={(params) => 
+                                <TextField {...params} 
+                                className={"card_value"}
+                                type="text" 
+                                label="Заполнить" 
+                                variant="outlined" />}
+                            /> */}
                     </div>
                 )
             })}

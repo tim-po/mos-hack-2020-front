@@ -1,16 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { Carousel } from 'react-responsive-carousel';
+import React, { useState } from 'react';
 import TitledList from '../../titledList';
-import AnimalInfo from '../animalInfo';
-import MainInfo from '../mainInfo';
-
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import './patScreenStaff.scss';
-import '../../../global.scss';
 
 
+import './mainInfo.scss';
 
-function PhotoCarousel(props) {
+const MainInfo = () => {
 
     const [state, setState] = useState(
         {
@@ -81,31 +75,44 @@ function PhotoCarousel(props) {
     );
 
     return (
-        <div className={"container"}>
-            <div className={"horizontal-container"}>
-                <div className={"button_container"}>
-                        <div className={"photo"}>
-                            <Carousel showThumbs={false}>
-                                <div>
-                                    <img src="https://cdn.pixabay.com/photo/2017/09/25/13/12/dog-2785074_1280.jpg" alt={''} />
-                                </div>
-                                <div>
-                                    <img src="https://cdn.pixabay.com/photo/2015/06/08/15/02/pug-801826_1280.jpg" alt={''}/>
-                                </div>
-                                <div>
-                                    <img src="https://cdn.pixabay.com/photo/2016/12/13/05/15/puppy-1903313_1280.jpg" alt={''} />
-                                </div>
-                            </Carousel>
-                        </div>
-                        <div>
-                            <button className={"button"}>Редактировать фото</button>
-                        </div>
-                </div>
-                <AnimalInfo/>
+        <div className={"state_container"}>
+                    <TitledList state={state["сведения об отлове"]} onSave={(changedState) => {
+                        let newState = Object.assign(state)
+                        newState["сведения об отлове"] = changedState
+                        setState({...newState})
+                    }}/>
+                    <TitledList state={state["сведения о новых владельцах"]} onSave={(changedState) => {
+                        let newState = Object.assign(state)
+                        newState["сведения о новых владельцах"] = changedState
+                        setState({...newState})
+                    }}/>
+                    <TitledList state={state["движение животного"]} onSave={(changedState) => {
+                        let newState = Object.assign(state)
+                        newState["движение животного"] = changedState
+                        setState({...newState})
+                    }}/>
+                    <TitledList state={state["ответственные за животное"]} onSave={(changedState) => {
+                        let newState = Object.assign(state)
+                        newState["ответственные за животное"] = changedState
+                        setState({...newState})
+                    }}/>
+                    <TitledList state={state["сведения об обработке от экто- и эндопаразитов"]} onSave={(changedState) => {
+                        let newState = Object.assign(state)
+                        newState["сведения об обработке от экто- и эндопаразитов"] = changedState
+                        setState({...newState})
+                    }}/>
+                    <TitledList state={state["сведения о вакцинации"]} onSave={(changedState) => {
+                        let newState = Object.assign(state)
+                        newState["сведения о вакцинации"] = changedState
+                        setState({...newState})
+                    }}/>
+                    <TitledList state={state["сведения о состоянии здоровья"]} onSave={(changedState) => {
+                        let newState = Object.assign(state)
+                        newState["сведения о состоянии здоровья"] = changedState
+                        setState({...newState})
+                    }}/>
             </div>
-            <MainInfo/>
-        </div>
     )
 }
 
-export default PhotoCarousel;
+export default MainInfo;
