@@ -87,9 +87,9 @@ function PhotoCarousel(props) {
                 <div className={"button_container"}>
                         <div className={"photo_1"}>
                             <Carousel showThumbs={false} renderIndicator={null}>
-                                <img className={"photo"} src="https://cs.pikabu.ru/post_img/2013/12/08/7/1386498983_1379395151.jpg" alt={''} />
-                                <img className={"photo"} src="https://sexbox.online/wp-content/uploads/2017/06/krivoj-chlen8.jpg" alt={''}/>
-                                <img className={"photo"} src="https://lh3.googleusercontent.com/proxy/CQb0e7YeGK7xgii-W4wtl5AVO00CH8NHGmn1KBrXtZfkG6ETgjSGUziLpBFsGfZ5CTTo3J4ssuqPblFjOZmTv97YWcyS69K2rfzUZBAs5vLp8YKsBOtYZttFbw3NDdPxAlf5Y3qeJIXsHWZqZCech0r4V5Oxik94bg" alt={''} />
+                                <img className={"photo"} src="https://wl-adme.cf.tsp.li/resize/728x/jpg/79e/c49/44a2895f18b7659744e7edf1a5.jpg" alt={''} />
+                                <img className={"photo"} src="https://faunistics.com/wp-content/uploads/2019/12/1-6.jpg" alt={''}/>
+                                <img className={"photo"} src="https://cameralabs.org/images/jamp/page/4b53fb89d1f7d16ff200999d54c80c6b_L.jpg" alt={''} />
                             </Carousel>
                             <button className={"delete_button"}>
                                 <img src={urna}/>
