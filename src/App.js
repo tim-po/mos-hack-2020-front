@@ -1,5 +1,7 @@
 import PhotoCarousel from './components/patScreenStaff/photoCarousel';
-import PetTile from './components/petTile'
+import PetTile from './components/petTile';
+import Login from './components/login';
+import PhotoCarouselClient from "./components/patScreenClient/photoCarousel";
 
 
 function App() {
@@ -7,6 +9,8 @@ function App() {
     <div className="App">
         <PhotoCarousel/>
         <PetTile isStuff/>
+        <Login/>
+        <PhotoCarouselClient/>
     </div>
   );
 }
